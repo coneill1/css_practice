@@ -1,0 +1,46 @@
+:root {
+  --grid-columns: 3fr 9fr;
+  --grid-columns-minimized: 1fr 23fr;
+  --grid-rows: 2fr 20fr 1fr;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+  grid-template-rows: var(--grid-rows);
+  transition: grid 1s ease;
+}
+
+header {
+  grid-column: 1/-1;
+  grid-row: 1/span 1;
+  background: green;
+}
+
+aside {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+
+  background: red;
+}
+
+footer {
+  grid-column: 1/-1;
+  grid-row: 3/span 1;
+  background: blue;
+}
+
+main {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+
+  background: orange;
+}
+
+
+
